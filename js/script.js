@@ -68,32 +68,33 @@ for(let i = 0; i < cards.length;i++){
 
 document.querySelector('.team-container').innerHTML = carta;
     
-console.log(cards);
+// console.log(cards);
 
 // ***BONUS***
 
-let nomeN;
-let ruoloN;
-let imgN;
+const invio = document.getElementById("addMemberButton");
 
-let pers= [];
+let pers= {};
 
-document.getElementById("addMemberButton").addEventListener("click", function(){
+invio.addEventListener("click", function(){
 
-    nomeN= document.getElementById("name").value;
-    ruoloN= document.getElementById("role").value;
-    imgN= document.getElementById("image").value;
-
-    pers = [
+    let nomeN= document.getElementById("name");
+    // console.log(nomeN);
+    let ruoloN= document.getElementById("role");
+    // console.log(ruoloN);
+    let imgN= document.getElementById("image");
+    // console.log(imgN);
+    
+   
+    pers = 
         {
-            'nome': nomeN,
-            'ruolo': ruoloN,
-            'image': imgN
+            'nome': nomeN.value,
+            'ruolo': ruoloN.value,
+            'image': imgN.value
 
-        }
-    ];
-
-    // pers.push(cards);
+        };
+    // console.log(pers);
+    cards.push(pers);
 });
 
-pers.push(cards);
+console.log(cards);
