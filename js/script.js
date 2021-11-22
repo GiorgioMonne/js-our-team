@@ -6,6 +6,7 @@
 
 // ***CREO L'ARRAY DI OGGETTI***
 
+
 let cards = [
     {
         'nome': "Wayne Barnett",
@@ -93,8 +94,20 @@ invio.addEventListener("click", function(){
             'image': imgN.value
 
         };
+        carta += `
+    <div class="team-card">
+        <div class="card-image">
+        <img src="${imgN.value}" alt=""/>
+    </div>
+        <div class="card-text">
+            <h3>${nomeN.value}</h3>
+            <p>${ruoloN.value}</p>
+        </div> 
+    </div> `;
+    document.querySelector('.team-container').innerHTML = carta;
     // console.log(pers);
     cards.push(pers);
 });
 
 console.log(cards);
+
